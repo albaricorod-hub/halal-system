@@ -1,0 +1,74 @@
+body {
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url("system-pattern.jpg");
+    background-position: center;
+    background-size: cover;
+    content: "";
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.system-pattern-heading {
+    border-radius: 0.75rem;
+    border: 1px solid rgba(217, 168, 62, 0.3);
+    background-color: #123b31;
+    background-image:
+        radial-gradient(ellipse at 80% 0%, rgba(102, 161, 124, 0.2), transparent 68%),
+        repeating-linear-gradient(45deg, transparent 0 23px, rgba(220, 235, 227, 0.04) 23px 24px),
+        repeating-linear-gradient(-45deg, transparent 0 23px, rgba(220, 235, 227, 0.04) 23px 24px),
+        linear-gradient(125deg, #123b31, #1d4d42 62%, #173e35);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.patterned-welcome-panel {
+    background-color: #123b31;
+    background-image:
+        radial-gradient(ellipse at 72% 18%, rgba(102, 161, 124, 0.18), transparent 44%),
+        repeating-linear-gradient(45deg, transparent 0 23px, rgba(220, 235, 227, 0.04) 23px 24px),
+        repeating-linear-gradient(-45deg, transparent 0 23px, rgba(220, 235, 227, 0.04) 23px 24px),
+        linear-gradient(145deg, #102e28, #1d4d42 58%, #123b31);
+}
+
+.welcome-content h1.system-pattern-heading {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    text-shadow: 0 2px 16px rgba(5, 28, 23, 0.22);
+}
+
+.form-header h2.system-pattern-heading {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #163b32;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 0 0 0.65rem;
+}
+
+.form-header h2.system-pattern-heading::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 999px;
+    background: #d9a83e;
+    content: "";
+}
